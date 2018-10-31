@@ -42,7 +42,9 @@ C:/Users/(your_user_name_on_your_computer)/GitTutorial. Once you have navigated 
 
 If you type git status, you can see the name of the file that you added. In order to add the file, you can type git add --all.
 
-//TODO greg, show how to make 
+Once you have done that, you have to do git commit -m "My first commit". You can replace the text inside the quotations with anything you'd like, but it is required to put some message in there.
+
+After you have added and committed, you can type git push. If you did everything correctly, you can go to your online repository to view your changes! 
 
 In order to deploy our project, we need to change two settings, so on the main page for your repository click settings.
 ![Change the name](/tutimg/pagesSetting1.png)
