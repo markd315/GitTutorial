@@ -36,3 +36,32 @@ Make sure the dropdown box is set to build from master, save your changes again 
 If you did everything right, it should look like the following and your link will redirect to your site!
 
 ![Set the branch to Master](/tutimg/pagesSetting2.png)
+
+Now that you've made your changes, and shared them publicly, it's time to let others know that your work is ready to be incorporated (merged).
+
+Navigate to the original repository (https://github.com/markd315/GitTutorial)
+and click the highlighted Pull Request button.
+
+![Make your PR](/tutimg/newPR.png)
+
+There will be two dropdowns shown and it's important to not scramble them!
+
+The one on the left is the target/base branch that we are modifying, or pulling the new code into.
+
+The one on the right is the compare branch that has new changes.
+
+Sometimes, there will also be changes (from a seperate Pull Request) in the base branch that will conflict with ours, but that presents a challenge for another day.
+
+For now, set your base branch to markd315/GitTutorial/master and your compare branch to whatever you made independently.
+
+Leave a useful comment describing the work you've done, and submit your work to be reviewed!
+
+Before long, the owner of the open-source repository, or your boss if this is an enterprise setting will review your work.
+
+She may then choose to
+* Merge it without changes
+* Leave comments asking questions
+* Request specific changes
+* Reject it outright (if it is unneeded).
+
+Congratulations on all your hard work!
