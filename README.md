@@ -13,6 +13,7 @@
 
 Welcome to the Project Management Bootcamp! Before you can start working, you are going to need to create a GitHub account, which can be done by going to https://github.com/ and following the on screen instructions. Once you have your account set up and ready to go, you are going to go ahead and copy some files that have already been created for you to work with by “forking” an existing repository.
   * What is forking?
+
 Forking is a simple process in which you copy someone elses project in to your own repository. This allows you to make changes to your personal copy without compromising their project. 
 
 Activity Instructions:
