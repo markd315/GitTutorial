@@ -35,6 +35,12 @@ git clone https://github.com/YOUR_GITHUB_NAME/REPOSITORY_NAME
 
 You are going to have to replace the two vague fields in this link with your personal GitHub account Name, and the repository name GitTutorial.
 
+Now that we have a local copy of the repository, we can make our first change. 
+
+Open your file explorer and navigate to the folder that was created when you cloned the repository. This is going to be located in
+C:/Users/(your_user_name_on_your_computer)/GitTutorial. Once you have navigated to that folder, go ahead and make a new text file. You can call it whatever you'd like, and you can type any content you would like in the text file. Once you are done with that, we are going to head back to Git to push our local changes to the GitHub repository.
+
+If you type git status, you can see the name of the file that you added. In order to add the file, you can type git add --all.
 
 //TODO greg, show how to make 
 
