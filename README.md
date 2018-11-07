@@ -3,7 +3,7 @@
 ###### Credits: Mark Davis, Greg Harmon
 
 ## Learning Goals:
-* Track progress and assignments with Trello
+* [Track progress and assignments with Trello](#trello-tracking)
 * Understand Git and Github
 * Fork a repository
 * Clone it locally
