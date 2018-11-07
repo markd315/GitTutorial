@@ -130,3 +130,5 @@ She may then choose to
 * Reject it outright (if it is unneeded).
 
 Congratulations on all your hard work!
+
+//TODO Add borders to images so we can tell where they start and the github readme begins etc.
