@@ -70,7 +70,7 @@ After you have added and committed, you can type git push. If you did everything
 //TODO Correct common mistakes and maintain a clean git history
 //Include info on squashing commits and performing resets here.
 //Include what to do if you make commits without pulling first
-
+//Include what to do if you commit bad work to master (reverting commits)
 
 In order to deploy our project, we need to change two settings, so on the main page for your repository click settings.
 ![Change the name](/tutimg/pagesSetting1.png)
