@@ -1,8 +1,8 @@
-## Git and GitHub Tutorial
+# Git and GitHub Tutorial
 
 ###### Credits: Mark Davis, Greg Harmon
 
-### Learning Goals:
+## Learning Goals:
 * Track progress and assignments with Trello
 * Understand Git and Github
 * Fork a repository
@@ -15,18 +15,18 @@
 * Deploy their work to Github Pages
 * Make a pull request from their fork, targeting the initial repository.
 
-# Trello Tracking
+### Trello Tracking
 Welcome to the Project Management Bootcamp!
 //TODO trello
 
 
 
-# Git Explainer
+### Git Explainer
 //TODO what is git
 
  Before you can start working, you are going to need to create a GitHub account, which can be done by going to https://github.com/ and following the on screen instructions. Once you have your account set up and ready to go, you are going to go ahead and copy some files that have already been created for you to work with by forkingù an existing repository.
 
-# Forking
+### Forking
   * What is forking?
 
 Forking is a process by which you copy someone elses (remote) project in to your own (remote) repository. This allows you to make changes to your personal copy without compromising their project. 
@@ -38,7 +38,7 @@ To do this, click the link above, and then look for the Fork button highlighted 
 
 Great! We've forked the repository so that you can make whichever changes you want.
 
-# Cloning
+### Cloning
 
 However, we aren't ready to work on it just yet. Right now, the forked repository only exists on GitHub. In order to make changes on your machine, we are going to need to clone the repository.
   * What is cloning?
