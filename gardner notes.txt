@@ -1,0 +1,13 @@
+What branch are you on/merging into etc. multiple branches straight
+
+Merge conflicts conceptual understanding
+
+Visualize merging with network graph and good network graph vs bad
+
+how to revert to previous state of repository without just reuploading code
+
+best practices for master and develop branches and different theories
+
+Focus on the git terminal
+
+Maybe show how to make git bash shortcuts (lz, lzp like Mark does)
