@@ -4,16 +4,16 @@
 
 ## Learning Goals:
 * [Track progress and assignments with Trello](#trello-tracking)
-* Understand Git and Github
-* Fork a repository
-* Clone it locally
-* Commit work that they did
-* Change branches and create new ones
-* Pull in work from other contributors
-* Resolve merge conflicts with concurrent work
-* Undo common mistakes and maintain a clean git history
-* Deploy their work to Github Pages
-* Make a pull request from their fork, targeting the initial repository.
+* [Understand Git and Github](#git-explainer)
+* [Fork a repository](#forking)
+* [Clone it locally](#cloning)
+* [Commit work that they did](#tracking-work)
+* [Change branches and create new ones](#branch-management)
+* [Pull in work from other contributors](#git-collaboration)
+* [Resolve merge conflicts with concurrent work](#merge-conflicts)
+* [Undo common mistakes and maintain a clean git history](#troubleshooting)
+* [Deploy their work to Github Pages](#deployment)
+* [Make a pull request from their fork](#sharing-your-work)
 
 ### Trello Tracking
 Welcome to the Project Management Bootcamp!
@@ -51,6 +51,8 @@ git clone https://github.com/YOUR_GITHUB_NAME/REPOSITORY_NAME
 
 You are going to have to replace the two vague fields in this link with your personal GitHub account Name, and the repository name GitTutorial.
 
+### Tracking Work
+
 Now that we have a local copy of the repository, we can make our first change. 
 
 Open your file explorer and navigate to the folder that was created when you cloned the repository. This is going to be located in
@@ -63,23 +65,28 @@ Once you have done that, you have to do git commit -m "My first commit". You can
 After you have added and committed, you can type git push. If you did everything correctly, you can go to your online repository to view your changes! 
 
 
-
+### Branch Management
 //TODO  Change branches and create new ones
 //Should be taught how to create a branch, recall which branch they're on, and checkout existing branches
 //Make sure to emphasize that they should pull work that might be on the remote version but not local
 
-
+### Git Collaboration
 //TODO Pull in work from other contributors
 //Create a branch with existing changes for the user to merge into his code
 //Have him perform the merge and guide him through remembering which branch he's on.
 
+### Merge Conflicts
 
+
+### Troubleshooting
 //TODO Correct common mistakes and maintain a clean git history
 //Include info on squashing commits and performing resets here.
 //Include what to do if you make commits without pulling first
 //Include what to do if you commit bad work to master (reverting commits)
 //Include git stash and git stash pop
 
+
+### Deployment
 In order to deploy our project, we need to change two settings, so on the main page for your repository click settings.
 ![Change the name](/tutimg/pagesSetting1.png)
 
@@ -92,6 +99,8 @@ Make sure the dropdown box is set to build from master, save your changes again 
 If you did everything right, it should look like the following and your link will redirect to your site!
 
 ![Set the branch to Master](/tutimg/pagesSetting2.png)
+
+### Sharing Your Work
 
 Now that you've made your changes, and shared them publicly, it's time to let others know that your work is ready to be incorporated (merged).
 
