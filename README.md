@@ -83,16 +83,23 @@ After you have added and committed, you can type git push. If you did everything
 
 //Include what to do if you make changes without pulling first (git stash and git stash pop)
 
-Maybe sometimes you'll accidentally enter a git commit that you want to undo.
 
-If you haven't pushed it to the remote repository yet, this is quite easy! We still have a valid copy of the branch stored *on* the remote repository, so we can just access it by resetting to that version.
+Maybe sometimes you'll accidentally enter some changes, or a git commit that you want to undo.
 
+If you haven't pushed it to the remote repository yet, this is quite easy! We still have a valid copy of the branch stored *on* the remote repository, so we can just access it by [resetting to the remote repository](#remote-undo).
+
+If you've also already pushed it, you're in a little bit more trouble just because we don't want to rewrite the history on remote branches once it's established. The best way to revert a single bad commit locally is to employ the [git revert](#synchronize-revert-and-push).
+
+#### Remote undo
 Simply run this command
 $ git reset --hard origin/master
 
 (replacing the master branch if necessary)
 
-If you've also already pushed it, you're in a little bit more trouble just because we don't want to rewrite the history on remote branches once it's established. The best way to revert a single bad commit locally is to syncronize the remote and local branches with
+
+#### Synchonize revert and push
+First, syncronize the remote and local branches with
+
 $ git checkout <branch> (if necessary)
 $ git pull
 
@@ -103,7 +110,7 @@ This example is for the "weird character" commit.
 
 $ git revert 57e8718c41d0b67201ec809fc4aaa5cd707ade39
 
-At this point, vim should come up and allow you to edit the reversion commit message. If you don't want to do that, it's okay! Just press the : key (shift + ;) and then q. Press enter to quit vim and complete the revert.
+At this point, vim should come up and allow you to edit the reversion commit message. If you don't want to do that, it's okay! Just press the : key (shift + ;) and then q (for quit). Press enter to quit vim and complete the revert.
 
 And finally
 $ git push
@@ -117,8 +124,33 @@ Sometimes, it is good practice to rewrite history, especially by reducing the am
 
 This is a good way to make reversions disappear too: since we're already rewriting history. If you do something in one commit and then undo it in another commit our log will still reflect both of those changes, but if we squash the work into one commit then both will disappear.
 
+There doesn't appear to be a single, industry-standard way to make a git squash from the command line and instead there are a couple techniques that will vary by situation. In a case where you want to rebase every commit since the target branch was created, I would use the [soft reset method](#soft-reset-squash).
+
+In any other case (or if you just want to learn one technique, I would use the [interactive rebase method](#interactive-rebase-squash)
+
+#### Soft reset squash
+First, we need to undo all of the commits from our history, *without* actually losing the work.
+This is called a soft reset and it's very important to not confuse it with a hard reset.
+
+Once again, in a soft reset we undo every commit since the reset point, but a hard reset means that we *also* throw away all our work since that point.
+
+$ git reset --soft origin/master
+
+$ git add --all
+to track all of the changed files
+
+$ git commit -m "Your commit message here"
+to make a new commit
+
+$ git push
+to update the remote branch corresponding to our local.
+
+#### Interactive rebase squash
+This method will rewrite remote history and is therefore not advisable without a backup.
 
 
+
+$ git rebase -i master
 
 ### Deployment
 In order to deploy our project, we need to change two settings, so on the main page for your repository click settings.
