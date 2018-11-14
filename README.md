@@ -137,24 +137,66 @@ First, we need to undo all of the commits from our history, *without* actually l
 This is called a soft reset and it's very important to not confuse it with a hard reset.
 
 Once again, in a soft reset we undo every commit since the reset point, but a hard reset means that we *also* throw away all our work since that point.
-
+```
 $ git reset --soft origin/master
 
 $ git add --all
+```
 to track all of the changed files
-
+```
 $ git commit -m "Your commit message here"
+```
 to make a new commit
-
+```
 $ git push
+```
 to update the remote branch corresponding to our local.
 
 #### Interactive rebase squash
 This method will rewrite remote history and is therefore not advisable without a backup.
 
+So let's leave that branch the way it is and make a new one.
+```
+$ git branch squashing_<your branch name here>
+$ git checkout -b squashing_<your branch name here>
+```
 
+Or to combine those into one step, 
+```
+$ git checkout -b squashing_<your branch name here>
+```
 
+Now run
+```
 $ git rebase -i master
+```
+
+where master is the base branch. Vim will come up, and we actually need to use it this time. All commits *since* your branch left the base branch will show up in this log, with the most recent ones at the bottom.
+
+If you only want to see n commits, try this version instead of -i master:
+```
+$ git rebase -i HEAD~n
+```
+
+Press the 'i' key to change the following text shown in vim.
+```
+pick fda59df commit 'stuff'
+pick x536897 commit 'things'
+pick c01a668 commit 'hello mom'
+```
+Right now, all of the commits shown will be saved if we quit vim (no changes). 
+If we want to squash a commit into the commit above it, simply change 'pick' to 'squash' (or just 's').
+
+When you're done, quit vim like before: just press the : key (shift + ;) and then q (for quit).
+
+Since we did this on a backed up version of the branch, make sure that this squashed version is working (perhaps run any unit tests you might have, or use git log) and then replace the target branch with it.
+
+```
+git branch -D target_branch (to delete it)
+git checkout -b target_branch (to recreate it from the backup)
+```
+
+
 
 ### Deployment
 In order to deploy our project, we need to change two settings, so on the main page for your repository click settings.
