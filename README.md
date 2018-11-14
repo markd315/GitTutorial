@@ -124,7 +124,9 @@ Now on your git log, you will see one commit with the changes you wanted to get 
 
 This same strategy will work if you haven't pushed as well, but it's a lot of trouble to go through for not much purpose.
 
-Sometimes, it is good practice to rewrite local history, especially by reducing the amount of commits to reflect individual units of work. This is called a "squash", in which you combine several commits into one.
+Sometimes, to keep a clear log of features and bugfixes in our commit log, it is good practice to rewrite local history, especially by reducing the amount of commits to reflect individual units of work. This is called a "squash", in which you combine several commits into one.
+
+Doing this before you push your work will save your colleagues reading time by grouping all relevant work into one commit and not spreading linked work across several commits, clogging the git log.
 
 This is a good way to make reverts (described above) disappear too: since we're already rewriting history. If you do something in one commit and then undo it in another commit our log will still reflect both of those changes, but if we squash the work into one commit then both will disappear.
 
@@ -153,7 +155,7 @@ $ git push
 to update the remote branch corresponding to our local.
 
 #### Interactive rebase squash
-This method will rewrite remote history and is therefore not advisable without a backup.
+This method can rewrite remote history and is therefore not advisable without a backup.
 
 So let's leave that branch the way it is and make a new one.
 ```
