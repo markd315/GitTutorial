@@ -24,7 +24,7 @@ Welcome to the Project Management Bootcamp!
 ### Git Explainer
 //TODO what is git
 
- Before you can start working, you are going to need to create a GitHub account, which can be done by going to https://github.com/ and following the on screen instructions. Once you have your account set up and ready to go, you are going to go ahead and copy some files that have already been created for you to work with by forkingù an existing repository.
+ Before you can start working, you are going to need to create a GitHub account, which can be done by going to https://github.com/ and following the on screen instructions. Once you have your account set up and ready to go, you are going to go ahead and copy some files that have already been created for you to work with by forking an existing repository.
 
 ### Forking
   * What is forking?
