@@ -102,7 +102,7 @@ $ git reset --hard origin/master
 
 
 #### Synchonize revert and push
-First, syncronize the remote and local branches with
+First, synchronize the remote and local branches with
 
 $ git checkout <branch> (if necessary)
 $ git pull
@@ -124,9 +124,9 @@ Now on your git log, you will see one commit with the changes you wanted to get 
 
 This same strategy will work if you haven't pushed as well, but it's a lot of trouble to go through for not much purpose.
 
-Sometimes, it is good practice to rewrite history, especially by reducing the amount of commits to reflect individual units of work. This is called a "squash", in which you combine several commits into one.
+Sometimes, it is good practice to rewrite local history, especially by reducing the amount of commits to reflect individual units of work. This is called a "squash", in which you combine several commits into one.
 
-This is a good way to make reversions disappear too: since we're already rewriting history. If you do something in one commit and then undo it in another commit our log will still reflect both of those changes, but if we squash the work into one commit then both will disappear.
+This is a good way to make reverts (described above) disappear too: since we're already rewriting history. If you do something in one commit and then undo it in another commit our log will still reflect both of those changes, but if we squash the work into one commit then both will disappear.
 
 There doesn't appear to be a single, industry-standard way to make a git squash from the command line and instead there are a couple techniques that will vary by situation. In a case where you want to rebase every commit since the target branch was created, I would use the [soft reset method](#soft-reset-squash).
 
@@ -201,6 +201,11 @@ git branch -D target_branch (to delete it)
 git checkout -b target_branch (to recreate it from the backup)
 ```
 
+It's usually a good idea to squash local work *before* we push.
+According to [git-scm.com](https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History)
+```
+One of the cardinal rules of Git is that, since so much work is local within your clone, you have a great deal of freedom to rewrite your history locally. However, once you push your work, it is a different story entirely, and you should consider pushed work as final unless you have good reason to change it. In short, you should avoid pushing your work until you’re happy with it and ready to share it with the rest of the world.
+```
 
 
 ### Deployment
