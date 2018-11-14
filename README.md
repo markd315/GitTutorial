@@ -80,7 +80,22 @@ After you have added and committed, you can type git push. If you did everything
 
 ### Troubleshooting
 //TODO Correct common mistakes and maintain a clean git history
-//Include info on squashing commits and performing resets here.
+
+Maybe sometimes you'll accidentally enter a git commit that you want to undo.
+If you've also already pushed it, you're in a little bit of trouble just because we don't want to rewrite the history on remote branches once it's established. The best way to revert a single bad commit locally is to syncronize the remote and local branches with
+$ git checkout <branch> (if necessary)
+$ git pull
+
+We need to find the identifier of the commit we want to revert. Go to your remote history and find the faulty commit. Look for the identifier (you can just click the copy button next to it)
+
+This example is for the "weird character" commit.
+![Commit number example](/tutimg/commitNum.png)
+
+$ git revert 57e8718c41d0b67201ec809fc4aaa5cd707ade39
+and finally
+& git push
+again.
+
 //Include what to do if you make commits without pulling first
 //Include what to do if you commit bad work to master (reverting commits)
 //Include git stash and git stash pop
