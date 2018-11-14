@@ -24,7 +24,7 @@ Welcome to the Project Management Bootcamp!
 ### Git Explainer
 //TODO what is git
 
- Before you can start working, you are going to need to create a GitHub account, which can be done by going to https://github.com/ and following the on screen instructions. Once you have your account set up and ready to go, you are going to go ahead and copy some files that have already been created for you to work with by forking an existing repository.
+ Before you can start working, you are going to need to create a GitHub account, which can be done by going to https://github.com/ and following the on screen instructions. Once you have your account set up and ready to go, you are going to go ahead and copy some files that have already been created for you to work with by forking an existing repository.
 
 ### Forking
   * What is forking?
@@ -81,8 +81,18 @@ After you have added and committed, you can type git push. If you did everything
 ### Troubleshooting
 //TODO Correct common mistakes and maintain a clean git history
 
+//Include what to do if you make changes without pulling first (git stash and git stash pop)
+
 Maybe sometimes you'll accidentally enter a git commit that you want to undo.
-If you've also already pushed it, you're in a little bit of trouble just because we don't want to rewrite the history on remote branches once it's established. The best way to revert a single bad commit locally is to syncronize the remote and local branches with
+
+If you haven't pushed it to the remote repository yet, this is quite easy! We still have a valid copy of the branch stored *on* the remote repository, so we can just access it by resetting to that version.
+
+Simply run this command
+$ git reset --hard origin/master
+
+(replacing the master branch if necessary)
+
+If you've also already pushed it, you're in a little bit more trouble just because we don't want to rewrite the history on remote branches once it's established. The best way to revert a single bad commit locally is to syncronize the remote and local branches with
 $ git checkout <branch> (if necessary)
 $ git pull
 
@@ -92,13 +102,22 @@ This example is for the "weird character" commit.
 ![Commit number example](/tutimg/commitNum.png)
 
 $ git revert 57e8718c41d0b67201ec809fc4aaa5cd707ade39
-and finally
-& git push
+
+At this point, vim should come up and allow you to edit the reversion commit message. If you don't want to do that, it's okay! Just press the : key (shift + ;) and then q. Press enter to quit vim and complete the revert.
+
+And finally
+$ git push
 again.
 
-//Include what to do if you make commits without pulling first
-//Include what to do if you commit bad work to master (reverting commits)
-//Include git stash and git stash pop
+Now on your git log, you will see one commit with the changes you wanted to get rid of, and another commit that exactly reverses this commit.
+
+This same strategy will work if you haven't pushed as well, but it's a lot of trouble to go through for not much purpose.
+
+Sometimes, it is good practice to rewrite history, especially by reducing the amount of commits to reflect individual units of work. This is called a "squash", in which you combine several commits into one.
+
+This is a good way to make reversions disappear too: since we're already rewriting history. If you do something in one commit and then undo it in another commit our log will still reflect both of those changes, but if we squash the work into one commit then both will disappear.
+
+
 
 
 ### Deployment
