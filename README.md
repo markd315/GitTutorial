@@ -187,7 +187,12 @@ pick c01a668 commit 'hello mom'
 Right now, all of the commits shown will be saved if we quit vim (no changes). 
 If we want to squash a commit into the commit above it, simply change 'pick' to 'squash' (or just 's').
 
-When you're done, quit vim like before: just press the : key (shift + ;) and then q (for quit).
+
+
+When you're done, we need to save our changes.
+Press 'esc' to exit the Vim Insert mode, and write the file with : w (and enter).
+
+Then quit vim like before: just press the : key (shift + ;) and then q and enter (for quit).
 
 Since we did this on a backed up version of the branch, make sure that this squashed version is working (perhaps run any unit tests you might have, or use git log) and then replace the target branch with it.
 
