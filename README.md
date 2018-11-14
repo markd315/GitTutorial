@@ -20,19 +20,15 @@ Welcome to the Project Management Bootcamp! The purpose of this bootcamp is to f
 
 
 ### Trello Tracking
-To begin using Trello, go to Trello.com and click either the create an account button in the center of the screen, or the Sign Up button in the top right corner of the screen. Once you have created your account, paste this link into your browser: https://trello.com/b/jKd6uW68/project-management-bootcamp
+To begin using Trello, go to Trello.com and click either the create an account button in the center of the screen, or the Sign Up button in the top right corner of the screen. Once you have created your account, paste this [link](https://trello.com/b/jKd6uW68/project-management-bootcamp) into your browser: 
 
 This board serves as a brekdown of our project. However, you are unable to edit this board; you must clone your own version of it. To do this, click on the ... More button in the Menu on the right side of your screen, and click Copy Board. You can name your version of the board whatever you would like. Once you are on your new board, take a look at your To Do list. You should see a card called 'Setup Trello and move my first card'. Drag this card from To Do to completed, and you're first task is complete!
-
-
-
-
 
 
 ### Git Explainer
 //TODO what is git
 
- Before you can start working, you are going to need to create a GitHub account, which can be done by going to https://github.com/ and following the on screen instructions. Once you have your account set up and ready to go, you are going to go ahead and copy some files that have already been created for you to work with by forking an existing repository.
+ Before you can start working, you are going to need to create a GitHub account, which can be done by going to https://github.com/ and following the on screen instructions. Once you have your account set up and ready to go, you are going to go ahead and copy some files that have already been created for you to work with by forking an existing repository.
 
 ### Forking
   * What is forking?
