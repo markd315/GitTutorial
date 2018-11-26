@@ -51,7 +51,9 @@ Cloning is the process of creating a local version of a repository to work on. W
 
 Once you have Git installed, go ahead and open it and type in the following command to clone your newly forked repository:
 
+```
 git clone https://github.com/YOUR_GITHUB_NAME/REPOSITORY_NAME
+```
 
 You are going to have to replace the two vague fields in this link with your personal GitHub account Name, and the repository name GitTutorial.
 
@@ -62,7 +64,10 @@ Now that we have a local copy of the repository, we can make our first change.
 Open your file explorer and navigate to the folder that was created when you cloned the repository. This is going to be located in
 C:/Users/(your_user_name_on_your_computer)/GitTutorial. Once you have navigated to that folder, go ahead and make a new text file. You can call it whatever you'd like, and you can type any content you would like in the text file. Once you are done with that, we are going to head back to Git to push our local changes to the GitHub repository.
 
-If you type git status, you can see the name of the file that you added. In order to add the file, you can type git add --all.
+If you type git status, you can see the name of the file that you added. In order to add the file, you can type 
+```
+$ git add --all.
+```
 
 Once you have done that, you have to do git commit -m "My first commit". You can replace the text inside the quotations with anything you'd like, but it is required to put some message in there.
 
@@ -70,9 +75,45 @@ After you have added and committed, you can type git push. If you did everything
 
 
 ### Branch Management
-//TODO  Change branches and create new ones
-//Should be taught how to create a branch, recall which branch they're on, and checkout existing branches
-//Make sure to emphasize that they should pull work that might be on the remote version but not local
+The problem we are solving is the need to create parallel versions of your codebase so that multiple people can work on different features at the same time.
+
+Given that each commit represents a "difference" between old and new versions of the codebase, we need to represent these parallel code versions with alternate histories.
+
+These histories *can* have some changes in common with each other (especially prior to the branch time), but must handle having different commits from each other.
+In the following diagrams, a movement to the right constitutes a passage of time, and a circle constitutes a single commit to the branch.
+
+A new row+color should be interpreted as being on a distinct branch.
+
+![Create a new branch and check it out](/tutimg/gitcheckout.png)
+As we can infer from the diagram, both branches have the first commit in common, but after they branch they each contain 2-3 different commits (representing work on different features).
+
+A major goal of branch management is to combine work that *was* done in parallel by multiple authors to a single, releasable version.
+
+In order to do this, we need to merge a target branch into a base branch.
+
+The way to do this is by switching to the base branch and running
+
+```
+$ git merge <target-name>
+```
+
+as shown below.
+
+![Merge in work from a different branch](/tutimg/gitmerge.png)
+
+Another way to combine work on multiple branches is with a rebase, which does have the consequence of rewriting project history.
+
+As such, the golden rule is to never rebase while you have a main branch checked out, like develop, test, or master. The opposite is generally true for merging.
+
+```
+$ git checkout <feature-branch>
+$ git rebase <base-branch>
+```
+
+The result of this is a single, linear commit history on the feature branch, with the base branch unchanged.
+
+It will start with the commits from base (in order), and then include all of the commits from the target (in order).
+
 
 ### Git Collaboration
 //TODO Pull in work from other contributors
@@ -256,3 +297,7 @@ She may then choose to
 Congratulations on all your hard work!
 
 //TODO Add borders to images so we can tell where they start and the github readme begins etc.
+
+### References
+
+https://www.atlassian.com/git/tutorials/using-branches/git-merge
