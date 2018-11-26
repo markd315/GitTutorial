@@ -306,7 +306,7 @@ If you only want to see n commits, try this version instead of -i master:
 $ git rebase -i HEAD~n
 ```
 
-Press the 'i' key to change the following text shown in vim.
+Press the 'i' key to change any of the following text shown in vim.
 ```
 pick fda59df commit 'stuff'
 pick x536897 commit 'things'
@@ -314,8 +314,6 @@ pick c01a668 commit 'hello mom'
 ```
 Right now, all of the commits shown will be saved if we quit vim (no changes). 
 If we want to squash a commit into the commit above it, simply change 'pick' to 'squash' (or just 's').
-
-
 
 When you're done, we need to save our changes.
 Press 'esc' to exit the Vim Insert mode, and write the file with : w (and enter).
@@ -334,7 +332,6 @@ According to [git-scm.com](https://git-scm.com/book/en/v2/Git-Tools-Rewriting-Hi
 ```
 One of the cardinal rules of Git is that, since so much work is local within your clone, you have a great deal of freedom to rewrite your history locally. However, once you push your work, it is a different story entirely, and you should consider pushed work as final unless you have good reason to change it. In short, you should avoid pushing your work until you’re happy with it and ready to share it with the rest of the world.
 ```
-
 
 ### Deployment
 In order to deploy our project, we need to change two settings, so on the main page for your repository click settings.
@@ -380,8 +377,6 @@ She may then choose to
 * Reject it outright (if it is unneeded).
 
 Congratulations on all your hard work!
-
-//TODO Add borders to images so we can tell where they start and the github readme begins etc.
 
 ### References
 
