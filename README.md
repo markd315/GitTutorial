@@ -85,9 +85,10 @@ In the following diagrams, a movement to the right constitutes a passage of time
 A new row+color should be interpreted as being on a distinct branch.
 
 ![Create a new branch and check it out](/tutimg/gitcheckout.png)
+
 As we can infer from the diagram, both branches have the first commit in common, but after they branch they each contain 2-3 different commits (representing work on different features).
 
-A major goal of branch management is to combine work that *was* done in parallel by multiple authors to a single, releasable version.
+A major goal of branch management is to combine work that *was* done in parallel by multiple authors to a single, releasable version with all of the features and bugfixes included.
 
 In order to do this, we need to merge a target branch into a base branch.
 
@@ -100,6 +101,10 @@ $ git merge <target-name>
 as shown below.
 
 ![Merge in work from a different branch](/tutimg/gitmerge.png)
+
+If we divided work appropriately in the first place (no changes to the same part of the same file in the two branches) our merge will process uninterrupted.
+
+If we have different changes affecting the same section, we'll face merge conflicts in which we have to select which version of the code section we want to use.
 
 Another way to combine work on multiple branches is with a rebase, which does have the consequence of rewriting project history.
 
@@ -116,9 +121,26 @@ It will start with the commits from base (in order), and then include all of the
 
 
 ### Git Collaboration
-//TODO Pull in work from other contributors
-//Create a branch with existing changes for the user to merge into his code
-//Have him perform the merge and guide him through remembering which branch he's on.
+A major rule of thumb for working with multiple people on a remote repository is to always 
+```
+$ git pull
+```
+BEFORE making any new branches, changes or commits.
+
+See the [troubleshooting section](#troubleshooting) for what to do if you fail to pull in time.
+
+If you do this or at least resolve the issues when you don't, merging the work of others should be just as straightforward as merging your own feature branches as described above.
+
+For our example, try merging the branch "feature-add-thai-food" into your master branch, and then reload the website.
+
+```
+$ git pull
+$ git checkout master
+$ git pull
+$ git merge feature-add-thai-food
+$ git push
+```
+
 
 ### Merge Conflicts
 
