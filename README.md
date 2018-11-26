@@ -106,6 +106,16 @@ If we divided work appropriately in the first place (no changes to the same part
 
 If we have different changes affecting the same section, we'll face merge conflicts in which we have to select which version of the code section we want to use.
 
+Now that we've merged code from the <target-name> branch, we can delete it if we want to so that we only store copies of the codebase that remain relevant.
+
+To kill a branch locally, we can simply run
+```
+$ git branch -D 
+```
+
+But if you've pushed it, deleting a remote copy will involve navigating to github>code>branches and deleting the desired branch.
+
+
 Another way to combine work on multiple branches is with a rebase, which does have the consequence of rewriting project history.
 
 As such, the golden rule is to never rebase while you have a main branch checked out, like develop, test, or master. The opposite is generally true for merging.
@@ -125,7 +135,7 @@ A major rule of thumb for working with multiple people on a remote repository is
 ```
 $ git pull
 ```
-BEFORE making any new branches, changes or commits.
+BEFORE making any new branches, merges, changes or commits.
 
 See the [troubleshooting section](#troubleshooting) for what to do if you fail to pull in time.
 
@@ -158,6 +168,21 @@ $ git merge feature-add-thai-food
 $ git push
 ```
 
+This all assumes that the user can read and write to all of the necessary branches.
+
+In many cases, an organization will write-protect their master, test and develop branches so that the leadership can perform code reviews, unit and integration testing, and other quality controls for their codebase.
+
+In all of these cases, merges must be handled on the remote repository through ***pull requests***.
+
+These are a forum thread of sorts, where affected users can review the changes, request new ones, comment on style, and approve the details of the merge before it hits the main branches of their codebase.
+
+See the [sharing your work section](#sharing-your-work) on how to create one.
+
+As a project manager, configuring your repository to require pull requests is simple, we just need to protect certain branches with a *rule*.
+
+Navigate to Settings>Branches>Add new rule in your Github repository and change the settings as desired. Make sure to save them before leaving.
+
+![Project branch settings](/tutimg/branchprot.png)
 
 ### Merge Conflicts
 
