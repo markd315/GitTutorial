@@ -129,6 +129,23 @@ BEFORE making any new branches, changes or commits.
 
 See the [troubleshooting section](#troubleshooting) for what to do if you fail to pull in time.
 
+We also want our branches to show up on the remote repository so that other users can pull them when they need to.
+
+The first time we push to our remote, we need to set the target location out in the cloud.
+
+We should already have a remote called *origin* from when we cloned, and so we'll be pushing there.
+
+```
+$ git push --set-upstream origin <feature-name>
+```
+From now on for this branch, a simple 
+
+```
+$ git push
+```
+
+should do the trick since the local and remote branches are already linked.
+
 If you do this or at least resolve the issues when you don't, merging the work of others should be just as straightforward as merging your own feature branches as described above.
 
 For our example, try merging the branch "feature-add-thai-food" into your master branch, and then reload the website.
