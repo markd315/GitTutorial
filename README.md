@@ -52,7 +52,7 @@ Cloning is the process of creating a local version of a repository to work on. W
 Once you have Git installed, go ahead and open it and type in the following command to clone your newly forked repository:
 
 ```
-git clone https://github.com/YOUR_GITHUB_NAME/REPOSITORY_NAME
+$ git clone https://github.com/YOUR_GITHUB_NAME/REPOSITORY_NAME
 ```
 
 You are going to have to replace the two vague fields in this link with your personal GitHub account Name, and the repository name GitTutorial.
@@ -188,9 +188,30 @@ Navigate to Settings>Branches>Add new rule in your Github repository and change 
 
 
 ### Troubleshooting
-//TODO Correct common mistakes and maintain a clean git history
 
-//Include what to do if you make changes without pulling first (git stash and git stash pop)
+A common mistake is to make the changes on the wrong branch, and then notice before making a commit that your checked out branch was wrong.
+
+We can investigate this with 
+```
+$ git status
+```
+
+which will show us changed files (whether they've been staged with git add or not).
+
+This is simple to fix, and lucky for us because it really is very common.
+
+The git tools contains a stack data structure on which we can store 
+
+The only two necessary operations of a stack data structure are to "push" (store a stack frame worth of changes) and "pop" (retrieve the latest frame worth of changes and remove it from the stack).
+
+As such, a stack is described as being LIFO ordered: Last-In is the First-Out.
+
+```
+$ git stash (to store the changes on the stack)
+$ git checkout <desired branch>
+$ git stash pop (to replay the stored changes and delete them from the stack)
+add/commit/push correct branch if and when desired
+```
 
 
 Maybe sometimes you'll accidentally enter some changes, or a git commit that you want to undo.
