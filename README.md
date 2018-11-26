@@ -80,6 +80,17 @@ The problem we are solving is the need to create parallel versions of your codeb
 Given that each commit represents a "difference" between old and new versions of the codebase, we need to represent these parallel code versions with alternate histories.
 
 These histories *can* have some changes in common with each other (especially prior to the branch time), but must handle having different commits from each other.
+
+Given the similarities between branches, it's very important to keep them straight in your head! Check out the [troubleshooting section](#troubleshooting) if you make a mistake, but these tips can help you keep it straight.
+
+Any implementation of git bash should tell you exactly what branch you're on in parentheses when you view it in the console, and we can change between them with a git checkout as we show below.
+
+![console](/tutimg/console.png)
+
+Branch naming conventions dictate that we always branch off of (when we start a feature) and merge back into (when we deliver a feature) a main branch, usually named develop or master (many projects will have both).
+
+This means that the main branch should be the base for any merges or pull requests, and the feature branch will be the target/comparison branch.
+
 In the following diagrams, a movement to the right constitutes a passage of time, and a circle constitutes a single commit to the branch.
 
 A new row+color should be interpreted as being on a distinct branch.
@@ -115,10 +126,9 @@ $ git branch -D
 
 But if you've pushed it, deleting a remote copy will involve navigating to github>code>branches and deleting the desired branch.
 
-
 Another way to combine work on multiple branches is with a rebase, which does have the consequence of rewriting project history.
 
-As such, the golden rule is to never rebase while you have a main branch checked out, like develop, test, or master. The opposite is generally true for merging.
+As such, the golden rule of rebasing is the *exact opposite* of the one for merges or pull requests. One is to never rebase while you have a main branch checked out, like develop, test, or master. Always check out the feature first.
 
 ```
 $ git checkout <feature-branch>
