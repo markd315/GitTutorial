@@ -20,7 +20,7 @@ Welcome to the Project Management Bootcamp! The purpose of this bootcamp is to f
 
 
 ### Trello Tracking
-To begin using Trello, go to Trello.com and click either the create an account button in the center of the screen, or the Sign Up button in the top right corner of the screen. Once you have created your account, paste this [link](https://trello.com/b/jKd6uW68/project-management-bootcamp) into your browser. 
+To begin using Trello, go to Trello.com and click either the create an account button in the center of the screen, or the Sign Up button in the top right corner of the screen. Once you have created your account, open this [link](https://trello.com/b/jKd6uW68/project-management-bootcamp) in a new tab.
 
 This board serves as a brekdown of our project. However, you are unable to edit this board; you must clone your own version of it. To do this, click on the '... More' button in the Menu on the right side of your screen, and click Copy Board. You can name your version of the board whatever you would like. Once you are on your new board, take a look at your To Do list. You should see a card called 'Setup Trello and move my first card'. Drag this card from To Do to completed, and you're first task is complete!
 
