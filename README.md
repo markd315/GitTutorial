@@ -2,6 +2,8 @@
 
 ###### Credits: Mark Davis, Greg Harmon
 
+//TODO: add the target audience into the presentation
+
 ## Learning Goals:
 * [Track progress and assignments with Trello](#trello-tracking)
 * [Understand Git and Github](#git-explainer)
