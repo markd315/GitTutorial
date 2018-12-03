@@ -73,7 +73,7 @@ If you type git status, you can see the name of the file that you added. In orde
 $ git add --all.
 ```
 
-Alternateively, when adding files you could just specify the file name e.g. 'git add "filename"' However, using git add --all just adds every single new or changed file to the staging area. Once you have done that, you have to do git commit -m "My first commit". Make sure to include quotations around your message following the -m. You can replace the text inside the quotations with anything you'd like, but it is required to put some message in there.
+Alternatively, when adding files you could just specify the file name e.g. 'git add "filename"' However, using git add --all just adds every single new or changed file to the staging area. Once you have done that, you have to do git commit -m "My first commit". Make sure to include quotations around your message following the -m. You can replace the text inside the quotations with anything you'd like, but it is required to put some message in there.
 
 After you have added and committed, you can type git push. If you did everything correctly, you can go to your online repository to view your changes! 
 
