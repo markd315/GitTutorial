@@ -32,7 +32,9 @@ Now that we have Trello all set up, we are going to get into Git and GitHub.
 
 Git is a version control system. Essentially, what this means is that Git tracks changed files and helps coordinate collaboration between multiple people that are working on the same thing. 
 
-Before you can start working, you are going to need to do a couple of things. First, you need to download Git, which can be found at https://git-scm.com/downloads. Next, you need to create a GitHub account. This can be done by going to https://github.com/ and following the on screen instructions. Once you have your account set up and ready to go, you are going to go ahead and copy some files that have already been created for you to work with by forking an existing repository.
+Before you can start working, you are going to need to do a couple of things. First, you need to download Git, which can be found at https://git-scm.com/downloads. Next, you need to create a GitHub account. This can be done by going to https://github.com/ and following the on screen instructions. Once you have your account set up and ready to go, you are going to go ahead and copy some files that have already been created for you to work with by forking an existing repository. However, before you do this, make sure to go back to your Trello board and move your 'Setup Github Account' card to completed! It is a good habit to mark things as complete as soon as they are finished to keep track of your progress.
+
+Note: There is also an 'in-progress' section on the Trello board which we haven't used yet. Essentially, this is because the tasks we are doing are relatively quick, and we are the only person working on them so we don't need to keep people updated. If you were on a team, people would need to know what is in progress so that they don't repeat work that is currently in the process of being completed.
 
 ### Forking
   * What is forking?
