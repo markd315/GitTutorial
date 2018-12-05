@@ -249,20 +249,44 @@ Go on Git, and head over to the creators-note branch (git checkout creators-note
 
 * What is a merge conflict?
 
-A merge conflict occurs when a user tries to make a change to an outdated version of master. In this case, master started out with only four cuisines. In branch features-add-thai-food, we added Thai Food to our list of cuisines, and made this become master's list of cuisines by doing git push. However, in the creators-note branch, we are still on a list with only four cuisines. The main problem here is that we are trying to add American food where Thai Food has already been placed. To deal with the merge conflict, we are going to start by opening up a tool to help us, by typing in 'git mergetool' Click return (enter) when prompted to.
+A merge conflict occurs when a user tries to make a change to an outdated version of master. In this case, master started out with only four cuisines. In branch features-add-thai-food, we added Thai Food to our list of cuisines, and made this become master's list of cuisines by doing git push. However, in the creators-note branch, we are still on a list with only four cuisines. The main problem here is that we are trying to add American food where Thai Food has already been placed. To deal with the merge conflict, we are going to start by opening up a tool to help us, by opening up the file.
 
-The view that opens up may be overwhelming, but essentially is displayed like so:
+```
+<<<<<<< HEAD
+<a href="https://en.wikipedia.org/wiki/American_cuisine">American food.. because Thai food isn't as good</a>
+=======
+<a href="https://en.wikipedia.org/wiki/Thai_cuisine">Thai food</a>
 
-  +----------------------+
-  |       |      |       |
-  |LOCAL  |BASE  |REMOTE |
-  |       |      |       |
-  +----------------------+
-  |      MERGED          |
-  |                      |
-  +----------------------+
+>>>>>>> feature-add-thai-food
+```
 
-To get between each view and look at the code, you can click cntrl+w. Essentially, in the bottom window, you will find what Git has attempted to merge together for you. It managed to keep the Thai Food, and also add American Food. Now that we think about it.. they are both pretty good, and no one said our list had to be exclusive to only five foods! Since this looks good, we can go ahead and type :wqa which will get us out of this window and approve the merged version. We can then run the git push command, and we should have smooth sailing from there. If this worked succesfully for you, go ahead to your Trello Board and move the creators note card to the completed section. If you had any trouble, refer to the [troubleshooting section](#troubleshooting) 
+You should see something more or less like this, with branch names (HEAD and feature-add-thai-food) and lines of code that are separated by the ===== divider. What we need to decide is which versions of the line of code we are going to keep.
+
+If you want to only keep one, you can just highlight the other (from the <<<< branch name all the way to the ==== divider), delete it, and delete the other branch name line as well.
+
+Basically, you're expected to remove all of the dividers and branch names, leaving only the exact code you want.
+
+If you want to try adding both American and Thai food, you'll have an additional formatting issue.
+
+HTML seperates lines of text with 
+
+```
+</br>
+```
+
+so make sure to enter a new one between the two links if you want to maintain the line spacing.
+
+Once all the dividers, branch names, and any unwanted code are gone, run 
+
+```
+$ git add --all
+$ git commit -m "Fixed merge conflict"
+```
+
+in the console window to update the master branch with the merge resolution.
+
+
+If this worked succesfully for you, go ahead to your Trello Board and move the creators note card to the completed section. If you had any trouble, refer to the [troubleshooting section](#troubleshooting) 
 
 ### Deployment
 Now that our favorite cuisines are properly documented and there is only good ol' English on our site, we are ready to order deploy our project to the world. To do this, we need to change two settings, so on the main page for your repository on GitHub click settings.
