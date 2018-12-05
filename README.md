@@ -217,12 +217,15 @@ Back to our example, try merging the branch "feature-add-thai-food" into your ma
 $ git checkout feature-add-thai-food
 $ git checkout master
 $ git merge feature-add-thai-food
+```
+When a page pop ups after this, just type :wq. This essentially just saves and quits this pop up. After that, do
+```
 $ git push
 ```
 
 This all assumes that the user can read and write to all of the necessary branches.
 
-If all of this worked, go ahead and move the 'Create webpage content (Add links by merging branch)' card on your Trello board to complete. If you ran into an issue, please refer to the trouble shooting section!
+If all of this worked, go ahead and move the 'Create webpage content (Add links by merging branch)' card on your Trello board to complete. If you take a look at your GitHub repository on the GitHub website, you'll see that the index.html file on master has been updated with our new choice of food! If you ran into an issue, please refer to the [troubleshooting section](#troubleshooting)
 
 In many cases, an organization will write-protect their master, test and develop branches so that the leadership can perform code reviews, unit and integration testing, and other quality controls for their codebase.
 
@@ -240,6 +243,7 @@ Navigate to Settings>Branches>Add new rule in your Github repository and change 
 
 ### Merge Conflicts
 
+Now that we have our favorite food listed, we are going to want to edit the creators note on our index.html file. Go on Git, and head over to the creators-note branch (git checkout creators-note) Once we are on this branch, we want to open up the index.html file and edit it to change a few things. 
 
 ### Troubleshooting
 
