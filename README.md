@@ -82,11 +82,42 @@ After you have added and committed, you can type git push. If you did everything
 You are probably thinking to yourself, "wow, that was pretty easy." However, the purpose of Git is for version control when multiple people are working on a project. With that being said, let's take a look at some ways to manage working with multiple people.
 
 ### Branch Management
-Now that we have our tools all set up, we can begin to work on the actual project. Go ahead and take a moment to look at how your site is currently going to end up looking (if no changes were to be made) by checking out markd315.github.io/GitTutorial Notice that there are multiple parts of the page, and let's take a look at the favorite cuisine section. Right now, there are four tasty things listed. However, imagine that you are a lover of Thai food, and it slipped your mind that you forgot to add it to the list! Luckily for you, we have made it easy for you to do so. Just go ahead and go into your cloned GitHub repository and open up index.html file from the feature-add-thai-food branch... but wait, what's a branch?
+Now that we have our tools all set up, we can begin to work on the actual project. Go ahead and take a moment to look at how your site is currently going to end up looking (if no changes were to be made) by opening up the repository you forked and/or cloned. Notice that there are multiple parts of the page, and let's take a look at the favorite cuisine section. Right now, there are four tasty things listed. However, imagine that you are a lover of Thai food, and it slipped your mind that you forgot to add it to the list! Luckily for you, we have made it easy for you to do so. Just go ahead and go into your cloned GitHub repository and open up index.html file from the feature-add-thai-food branch... but wait, what's a branch?
 
->Todo whats a branch
+A branch is just a starting commit (prior to which all other commits are common), followed by a list of commits exclusive to the branch (as well as any children).
 
->Modify this to explain that it is what branches do The problem we are solving is the need to create parallel versions of your codebase so that multiple people can work on different features at the same time.
+It's a way of tracking alternate versions of file history, for example you could:
+
+```
+Make commit A on master (the starting branch)
+
+Create branch 2 and check it out (meaning new commits go here).
+
+Make commit B.
+
+Create branch 3 and check it out.
+
+Make commit C.
+
+Check out branch 2 again.
+
+Create branch 4 and check it out.
+
+Make commit D
+```
+
+The (ordered) list of commits each branch would have following this exercise (from oldest to newest) are:
+master(A)
+2(A, B)
+3(A, B, C)
+4(A, B, D)
+
+Refer to the diagram for a visualization.
+
+![console](/tutimg/branches.png)
+
+Each commit could represent a different feature, or parts of a feature, like A is starting the project, B is adding contact info, C is a bugfix that improves security, and 
+
 
 Given that each commit represents a "difference" between old and new versions of the codebase, we need to represent these parallel code versions with alternate histories.
 
