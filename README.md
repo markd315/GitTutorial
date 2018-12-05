@@ -243,7 +243,7 @@ Navigate to Settings>Branches>Add new rule in your Github repository and change 
 
 ### Merge Conflicts
 
-Now that we have our favorite food listed, we still have a pretty ugly part of our website: the creators note. It's not in English, which is a problem for us, since we Americans love speaking English. Luckily, there is another branch in your GitHub repository called creators-note. In this branch, the placeholder creator's note text is replaced with something else. Additionally (and this will cause our issues), the favorite cuisines are updated, just like in the thai food branch. Let's go ahead and make these changes.
+Now that we have our favorite food listed, we still have a pretty ugly part of our website: the creators note. Luckily, there is another branch in your GitHub repository called creators-note. In this branch, the placeholder creator's note text is replaced with something else. Additionally (and this will cause our issues), the favorite cuisines are updated, just like in the thai food branch. Let's go ahead and make these changes.
 
 Go on Git, and head over to the creators-note branch (git checkout creators-note) Once we are on this branch, we are going to change right back to master (git checkout master), and simply merge the creators-note branch into master like we did for the features-add-thai-food branch, by running (git merge creators-note) However, it appears we have run into a 'merge conflict'
 
