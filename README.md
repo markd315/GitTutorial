@@ -68,8 +68,8 @@ You are going to have to replace the two vague fields in this link with your per
 
 Now that we have a local copy of the repository, we can make our first change. 
 
-Open your file explorer and navigate to the folder that was created when you cloned the repository. This is going to be located in
-C:/Users/(your_user_name_on_your_computer)/GitTutorial. Once you have navigated to that folder, go ahead and make a new text file. You can call it whatever you'd like, and you can type any content you would like in the text file. Once you are done with that, we are going to head back to Git to push our local changes to the GitHub repository.
+Open up your notepad and type some text; anything you'd like. Now go ahead and save the file (call it whatever you'd like, as long as it isn't the same name as a text file in your project folder), and when prompted to choose the destination to save the file to, navigate to the folder that was created when you cloned the repository. This is going to be located in C:/Users/(your_user_name_on_your_computer)/GitTutorial
+Once you have navigated to that folder and saved your file, we are going to head back to Git to push our local changes to the GitHub repository.
 
 If you type git status, you can see the name of the file that you added. In order to add the file to the staging area, you can type 
 ```
@@ -78,12 +78,12 @@ $ git add --all.
 
 Alternatively, when adding files you could just specify the file name e.g. 'git add "filename"' However, using git add --all just adds every single new or changed file to the staging area. Once you have done that, you have to do git commit -m "My first commit". Make sure to include quotations around your message following the -m. You can replace the text inside the quotations with anything you'd like, but it is required to put some message in there.
 
-After you have added and committed, you can type git push. If you did everything correctly, you can go to your online repository to view your changes! 
+After you have added and committed, you can type 'git push'. If you did everything correctly, you can go to your online repository to view your changes! Also, make sure to go on your Trello and move the "Push a file to my GitHub" card to the completed section.
 
 You are probably thinking to yourself, "wow, that was pretty easy." However, the purpose of Git is for version control when multiple people are working on a project. With that being said, let's take a look at some ways to manage working with multiple people.
 
 ### Branch Management
-Now that we have our tools all set up, we can begin to work on the actual project. Go ahead and take a moment to look at how your site is currently going to end up looking (if no changes were to be made) by opening up the repository you forked and/or cloned. Notice that there are multiple parts of the page, and let's take a look at the favorite cuisine section. Right now, there are four tasty things listed. However, imagine that you are a lover of Thai food, and it slipped your mind that you forgot to add it to the list! Luckily for you, we have made it easy for you to do so. Just go ahead and go into your cloned GitHub repository and open up index.html file from the feature-add-thai-food branch... but wait, what's a branch?
+Now that we have our tools all set up, we can begin to work on the actual project. Go ahead and take a moment to look at how your site is currently going to end up looking (if no changes were to be made) by going to your browser and going to the markd315.github.io/GitTutorial Notice that there are multiple parts of the page, and take a look at the favorite cuisine section. Right now, there are four tasty things listed. However, imagine that you are a lover of Thai food, and it slipped your mind that you forgot to add it to the list! Luckily for you, we have made it easy for you to do so. Just go ahead and go into your cloned GitHub repository and merge the feature-add-thai-food branch into the master branch... but wait, what's a branch?
 
 A branch is just a starting commit (prior to which all other commits are common), followed by a list of commits exclusive to the branch (as well as any children).
 
@@ -146,7 +146,7 @@ A major goal of branch management is to combine work that *was* done in parallel
 
 In order to do this, we need to merge a target branch into a base branch.
 
-The way to do this is by switching to the base branch and running
+The way to do this is by switching to the branch we want to merge, and then switching back to the base branch and running
 
 ```
 $ git merge <target-name>
@@ -211,17 +211,18 @@ should do the trick since the local and remote branches are already linked.
 
 If you do this or at least resolve the issues when you don't, merging the work of others should be just as straightforward as merging your own feature branches as described above.
 
-For our example, try merging the branch "feature-add-thai-food" into your master branch, and then reload the website.
+Back to our example, try merging the branch "feature-add-thai-food" into your master branch, and then reload the website. If you are getting an error, make sure that you changed to the branch (by doing git checkout feature-add-thai-food), and then changed back to master afterwards. Refer to the code below:
 
 ```
-$ git pull
+$ git checkout feature-add-thai-food
 $ git checkout master
-$ git pull
 $ git merge feature-add-thai-food
 $ git push
 ```
 
 This all assumes that the user can read and write to all of the necessary branches.
+
+If all of this worked, go ahead and move the 'Create webpage content (Add links by merging branch)' card on your Trello board to complete. If you ran into an issue, please refer to the trouble shooting section!
 
 In many cases, an organization will write-protect their master, test and develop branches so that the leadership can perform code reviews, unit and integration testing, and other quality controls for their codebase.
 
