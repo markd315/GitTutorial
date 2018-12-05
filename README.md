@@ -55,13 +55,14 @@ However, we aren't ready to work on it just yet. Right now, the forked repositor
 
 Cloning is the process of creating a local version of a repository to work on. While there are multiple ways to clone a repository, we are going to use Git to do this.
 
-Open Git and type in the following command to clone your newly forked repository:
+Open Git and navigate to /c/Users/your_username, which may just show up as a ~. If you are having trouble finding it, you can use ls to look at the available choices for where you are currently. If you see Users or your_username, use the cd (change directory) command to get to the desired destination. This means you should type 'cd Users' or 'cd your_username' to change to these locations. If you don't see either of them, you can use 'cd ..' to just move back one level and then try ls again until you find where you need to be.
+Once you have made it to the correct location, type in the following command to clone your newly forked repository:
 
 ```
 $ git clone https://github.com/YOUR_GITHUB_NAME/REPOSITORY_NAME
 ```
 
-You are going to have to replace the two vague fields in this link with your personal GitHub account Name, and the repository name GitTutorial.
+You are going to have to replace the two vague fields in this link with your personal GitHub account Name, and the repository name GitTutorial. Once you have successfully cloned this, do cd GitTutorial to change your directory to the GitTutorial. 
 
 ### Tracking Work
 
