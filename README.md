@@ -243,7 +243,71 @@ Navigate to Settings>Branches>Add new rule in your Github repository and change 
 
 ### Merge Conflicts
 
-Now that we have our favorite food listed, we are going to want to edit the creators note on our index.html file. Go on Git, and head over to the creators-note branch (git checkout creators-note) Once we are on this branch, we want to open up the index.html file and edit it to change a few things. 
+Now that we have our favorite food listed, we still have a pretty ugly part of our website: the creators note. It's not in English, which is a problem for us, since we Americans love speaking English. Luckily, there is another branch in your GitHub repository called creators-note. In this branch, the creator's note text is replaced with some good old English. Additionally, the favorite cuisines are updated, because American food is undoubtedly better than Thai Food. Let's go ahead and make these changes.
+
+Go on Git, and head over to the creators-note branch (git checkout creators-note) Once we are on this branch, we are going to change right back to master (git checkout master), and simply merge the creators-note branch into master like we did for the features-add-thai-food branch, by running (git merge creators-note) However, it appears we have run into a 'merge conflict'
+
+* What is a merge conflict?
+
+A merge conflict occurs when a user tries to make a change to an outdated version of master. In this case, master started out with only four cuisines. In branch features-add-thai-food, we added Thai Food to our list of cuisines, and made this become master's list of cuisines by doing git push. However, in the creators-note branch, we are still on a list with only four cuisines. The main problem here is that we are trying to add American food where Thai Food has already been placed. To deal with the merge conflict, we are going to start by opening up a tool to help us, by typing in 'git mergetool' Click return (enter) when prompted to.
+
+The view that opens up may be overwhelming, but essentially is displayed like so:
+
+  +----------------------+
+  |       |      |       |
+  |LOCAL  |BASE  |REMOTE |
+  |       |      |       |
+  +----------------------+
+  |      MERGED          |
+  |                      |
+  +----------------------+
+
+To get between each view and look at the code, you can click cntrl+w. Essentially, in the bottom window, you will find what Git has attempted to merge together for you. It managed to keep the Thai Food, and also add American Food. Now that we think about it.. they are both pretty good, and no one said our list had to be exclusive to only five foods! Since this looks good, we can go ahead and type :wqa which will get us out of this window and approve the merged version. We can then run the git push command, and we should have smooth sailing from there. If this worked succesfully for you, go ahead to your Trello Board and move the creators note card to the completed section. If you had any trouble, refer to the [troubleshooting section](#troubleshooting) 
+
+### Deployment
+Now that our favorite cuisines are properly documented and there is only good ol' English on our site, we are ready to order deploy our project to the world. To do this, we need to change two settings, so on the main page for your repository on GitHub click settings.
+![Change the name](/tutimg/pagesSetting1.png)
+
+First, make sure to name the project exactly the same as YOUR github username. The example above is for a user (or organization) named CEN3031-10A.
+
+Save the rename, and secondly, scroll all the way down to the Github Pages section of this settings page.
+
+Make sure the dropdown box is set to build from master, save your changes again and refresh the page.
+
+If you did everything right, it should look like the following and your link will redirect to your site! Please move your final card on your Trello board to complete.
+
+![Set the branch to Master](/tutimg/pagesSetting2.png)
+
+### Sharing Your Work
+
+Now that you've made your changes, and shared them publicly, it's time to let others know that your work is ready to be incorporated (merged).
+
+Navigate to the original repository (https://github.com/markd315/GitTutorial)
+and click the highlighted Pull Request button.
+
+![Make your PR](/tutimg/newPR.png)
+
+There will be two dropdowns shown and it's important to not scramble them!
+
+The one on the left is the target/base branch that we are modifying, or pulling the new code into.
+
+The one on the right is the compare branch that has new changes.
+
+Sometimes, there will also be changes (from a seperate Pull Request) in the base branch that will conflict with ours, but that presents a challenge for another day.
+
+For now, set your base branch to markd315/GitTutorial/master and your compare branch to whatever you made independently.
+
+Leave a useful comment describing the work you've done, and submit your work to be reviewed!
+
+Before long, the owner of the open-source repository, or your boss if this is an enterprise setting will review your work.
+
+She may then choose to
+* Merge it without changes
+* Leave comments asking questions
+* Request specific changes
+* Reject it outright (if it is unneeded).
+
+Congratulations on all your hard work!
 
 ### Troubleshooting
 
@@ -391,51 +455,7 @@ According to [git-scm.com](https://git-scm.com/book/en/v2/Git-Tools-Rewriting-Hi
 One of the cardinal rules of Git is that, since so much work is local within your clone, you have a great deal of freedom to rewrite your history locally. However, once you push your work, it is a different story entirely, and you should consider pushed work as final unless you have good reason to change it. In short, you should avoid pushing your work until you’re happy with it and ready to share it with the rest of the world.
 ```
 
-### Deployment
-In order to deploy our project, we need to change two settings, so on the main page for your repository click settings.
-![Change the name](/tutimg/pagesSetting1.png)
-
-First, make sure to name the project exactly the same as YOUR github username. The example above is for a user (or organization) named CEN3031-10A.
-
-Save the rename, and secondly, scroll all the way down to the Github Pages section of this settings page.
-
-Make sure the dropdown box is set to build from master, save your changes again and refresh the page.
-
-If you did everything right, it should look like the following and your link will redirect to your site!
-
-![Set the branch to Master](/tutimg/pagesSetting2.png)
-
-### Sharing Your Work
-
-Now that you've made your changes, and shared them publicly, it's time to let others know that your work is ready to be incorporated (merged).
-
-Navigate to the original repository (https://github.com/markd315/GitTutorial)
-and click the highlighted Pull Request button.
-
-![Make your PR](/tutimg/newPR.png)
-
-There will be two dropdowns shown and it's important to not scramble them!
-
-The one on the left is the target/base branch that we are modifying, or pulling the new code into.
-
-The one on the right is the compare branch that has new changes.
-
-Sometimes, there will also be changes (from a seperate Pull Request) in the base branch that will conflict with ours, but that presents a challenge for another day.
-
-For now, set your base branch to markd315/GitTutorial/master and your compare branch to whatever you made independently.
-
-Leave a useful comment describing the work you've done, and submit your work to be reviewed!
-
-Before long, the owner of the open-source repository, or your boss if this is an enterprise setting will review your work.
-
-She may then choose to
-* Merge it without changes
-* Leave comments asking questions
-* Request specific changes
-* Reject it outright (if it is unneeded).
-
-Congratulations on all your hard work!
-
 ### References
 
 https://www.atlassian.com/git/tutorials/using-branches/git-merge
+https://stackoverflow.com/questions/161813/how-to-resolve-merge-conflicts-in-git/7589612#7589612
