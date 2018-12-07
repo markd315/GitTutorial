@@ -11,9 +11,9 @@
 * [Change branches and create new ones](#branch-management)
 * [Pull in work from other contributors](#git-collaboration)
 * [Resolve merge conflicts with concurrent work](#merge-conflicts)
-* [Undo common mistakes and maintain a clean git history](#troubleshooting)
 * [Deploy their work to Github Pages](#deployment)
 * [Make a pull request from their fork](#sharing-your-work)
+* [Undo common mistakes and maintain a clean git history](#troubleshooting)
 
 ### Introduction
 Welcome to the Project Management Bootcamp! The purpose of this bootcamp is to familiarize you with using the Trello and GitHub technologies. This bootcamp is intended for first semester computer science students to complete at the beginning of their first programming course. The bootcamp is going to be centered around developing your own website. We are going to use Trello to break down this task into smaller sub-tasks, and GitHub to keep track of your code and host your website. 
