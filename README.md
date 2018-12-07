@@ -40,7 +40,7 @@ Note: There is also an 'in-progress' section on the Trello board which we haven'
 ### Forking
   * What is forking?
 
-Forking is a process by which you copy someone elses (remote) project in to your own (remote) repository. This allows you to make changes to your personal copy without compromising their project. 
+[Fork](#fork)ing is a process by which you copy someone elses (remote) project in to your own (remote) repository. This allows you to make changes to your personal copy without compromising their project. 
 
 For this activity, we are going to start with forking this repository: https://github.com/markd315/GitTutorial
 
@@ -51,10 +51,10 @@ Great! We've forked the repository so that you can make whichever changes you wa
 
 ### Cloning
 
-However, we aren't ready to work on it just yet. Right now, the forked repository only exists on GitHub. In order to make changes on your machine, we are going to need to clone the repository.
+However, we aren't ready to work on it just yet. Right now, the [fork](#fork)ed repository only exists on GitHub. In order to make changes on your machine, we are going to need to clone the repository.
   * What is cloning?
 
-Cloning is the process of creating a local version of a repository to work on. While there are multiple ways to clone a repository, we are going to use Git to do this.
+[Cloning](#clone) is the process of creating a local version of a repository to work on. While there are multiple ways to [clone](#clone) a repository, we are going to use Git to do this.
 
 Open Git and navigate to /c/Users/your_username, which may just show up as a ~. If you are having trouble finding it, you can use ls to look at the available choices for where you are currently. If you see Users or your_username, use the cd (change directory) command to get to the desired destination. This means you should type 'cd Users' or 'cd your_username' to change to these locations. If you don't see either of them, you can use 'cd ..' to just move back one level and then try ls again until you find where you need to be.
 Once you have made it to the correct location, type in the following command to clone your newly forked repository:
@@ -79,14 +79,14 @@ $ git add --all.
 
 Alternatively, when adding files you could just specify the file name e.g. 'git add "filename"' However, using git add --all just adds every single new or changed file to the staging area. Once you have done that, you have to do git commit -m "My first commit". Make sure to include quotations around your message following the -m. You can replace the text inside the quotations with anything you'd like, but it is required to put some message in there.
 
-After you have added and committed, you can type 'git push'. If you did everything correctly, you can go to your online repository to view your changes! Also, make sure to go on your Trello and move the "Push a file to my GitHub" card to the completed section.
+After you have added and [commit](#commit)ted, you can type 'git push'. If you did everything correctly, you can go to your online repository to view your changes! Also, make sure to go on your Trello and move the "Push a file to my GitHub" card to the completed section.
 
-You are probably thinking to yourself, "wow, that was pretty easy." However, the purpose of Git is for version control when multiple people are working on a project. With that being said, let's take a look at some ways to manage working with multiple people.
+You are probably thinking to yourself, "wow, that was pretty easy." However, the purpose of Git (and what differentiates it from a more naive way of simply backing up your work) is for release management and conflicts that arise when multiple people are working on a project. With that being said, let's take a look at some ways to manage working with multiple people.
 
 ### Branch Management
 Now that we have our tools all set up, we can begin to work on the actual project. Go ahead and take a moment to look at how your site is currently going to end up looking (if no changes were to be made) by going to your browser and going to the markd315.github.io/GitTutorial Notice that there are multiple parts of the page, and take a look at the favorite cuisine section. Right now, there are four tasty things listed. However, imagine that you are a lover of Thai food, and it slipped your mind that you forgot to add it to the list! Luckily for you, we have made it easy for you to do so. Just go ahead and go into your cloned GitHub repository and merge the feature-add-thai-food branch into the master branch... but wait, what's a branch?
 
-A branch is just a starting commit (prior to which all other commits are common), followed by a list of commits exclusive to the branch (as well as any children).
+A [branch](#branch) is just a starting [commit](#commit) (prior to which all other commits are common), followed by a list of commits exclusive to the branch (as well as any children).
 
 It's a way of tracking alternate versions of file history, for example you could:
 
@@ -118,7 +118,7 @@ Refer to the diagram for a visualization.
 
 ![console](/tutimg/branches.png)
 
-Each commit could represent a different feature, or parts of a feature, like A is starting the project, B is adding contact info, C is a bugfix that improves security, and 
+Each [commit](#commit) could represent a different feature, or parts of a feature, like A is starting the project, B is adding contact info, C is a bugfix that improves security, and 
 
 
 Given that each commit represents a "difference" between old and new versions of the codebase, we need to represent these parallel code versions with alternate histories.
@@ -482,44 +482,44 @@ One of the cardinal rules of Git is that, since so much work is local within you
 
 ### Glossary
 
-Branch
+###### Branch
 A branch is a parallel version of a repository. It is contained within the repository, but does not affect the primary or master branch allowing you to work freely without disrupting the "live" version. When you've made the changes you want to make, you can merge your branch back into the master branch to publish your changes. For more information, see "About branches."
 
-Clone
+###### Clone
 A clone is a copy of a repository that lives on your computer instead of on a website's server somewhere, or the act of making that copy. With your clone you can edit the files in your preferred editor and use Git to keep track of your changes without having to be online. It is, however, connected to the remote version so that changes can be synced between the two. You can push your local changes to the remote to keep them synced when you're online.
 er.
 
-Commit
+###### Commit
 A commit, or "revision", is an individual change to a file (or set of files). It's like when you save a file, except with Git, every time you save it creates a unique ID (a.k.a. the "SHA" or "hash") that allows you to keep record of what changes were made when and by who. Commits usually contain a commit message which is a brief description of what changes were made.
 
-Diff
+###### Diff
 A diff is the difference in changes between two commits, or saved changes. The diff will visually describe what was added or removed from a file since its last commit.
 
-Fetch
+###### Fetch
 Fetching refers to getting the latest changes from an online repository without merging them in. Once these changes are fetched you can compare them to your local branches (the code residing on your local machine).
 
-Fork
+###### Fork
 A fork is a personal copy of another user's repository that lives on your account. Forks allow you to freely make changes to a project without affecting the original. Forks remain attached to the original, allowing you to submit a pull request to the original's author to update with your changes. You can also keep your fork up to date by pulling in updates from the original.
 
-Issue
+###### Issue
 Issues are suggested improvements, tasks or questions related to the repository. Issues can be created by anyone (for public repositories), and are moderated by repository collaborators. Each issue contains its own discussion forum, can be labeled and assigned to a user.
 
-Merge
+###### Merge
 Merging takes the changes from one branch (in the same repository or from a fork), and applies them into another. This often happens as a pull request (which can be thought of as a request to merge), or via the command line. A merge can be done automatically via a pull request via the GitHub web interface if there are no conflicting changes, or can always be done via the command line. For more information, see "Merging a pull request."
 
-Pull
+###### Pull
 Pull refers to when you are fetching in changes and merging them. For instance, if someone has edited the remote file you're both working on, you'll want to pull in those changes to your local copy so that it's up to date.
 
-Pull request
+###### Pull request
 Pull requests are proposed changes to a repository submitted by a user and accepted or rejected by a repository's collaborators. Like issues, pull requests each have their own discussion forum. For more information, see "About pull requests."
 
-Push
+###### Push
 Pushing refers to sending your committed changes to a remote repository, such as a repository hosted on GitHub. For instance, if you change something locally, you'd want to then push those changes so that others may access them.
 
-Remote
+###### Remote
 This is the version of something that is hosted on a server, most likely GitHub. It can be connected to local clones so that changes can be synced.
 
-Repository
+###### Repository
 A repository is the most basic element of GitHub. They're easiest to imagine as a project's folder. A repository contains all of the project files (including documentation), and stores each file's revision history. Repositories can have multiple collaborators and can be either public or private.
 
 ### References
