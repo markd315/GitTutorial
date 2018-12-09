@@ -17,7 +17,7 @@
 * [Common terms](#glossary)
 
 ### Introduction
-Welcome to the Project Management Bootcamp! The purpose of this bootcamp is to familiarize you with using the Trello and GitHub technologies. This bootcamp is intended for first semester computer science students to complete at the beginning of their first programming course. The bootcamp is going to be centered around developing your own website. We are going to use Trello to break down this task into smaller sub-tasks, and GitHub to keep track of your code and host your website. 
+Welcome to the Project Management Bootcamp! The purpose of this bootcamp is to familiarize you with using the Trello and GitHub technologies. This bootcamp is intended for first semester computer science students to complete at the beginning of their first programming course. The bootcamp is going to be centered around developing your own website. We are going to use Trello to break down this task into smaller sub-tasks, and GitHub to keep track of your code and host your website. Please note that this bootcamp consists of two activities, and that you can complete them in separate sittings. However, the second activity is a continuation of the first, so you will need to complete the first one in order to work on the second one. 
 
 
 ### Trello Tracking
@@ -241,6 +241,8 @@ As a project manager, configuring your repository to require pull requests is si
 Navigate to Settings>Branches>Add new rule in your Github repository and change the settings as desired. Make sure to save them before leaving.
 
 ![Project branch settings](/tutimg/branchprot.png)
+
+This was the end of activity 1! We hope that you gained some insight into branches, commits, forking and cloning. However, these are just some of the basic parts of version control and project management. Additionally, we haven't encountered any issues yet.. move forward onto the next activity and you will learn how to deal with merge conflicts, some other general troubleshooting, and even learn how to turn this repository into a webpage!
 
 ### Merge Conflicts
 
